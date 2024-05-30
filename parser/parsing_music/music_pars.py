@@ -14,5 +14,6 @@ def get_link_from_music(link):
         ydl.download(link)
         video_info = ydl.extract_info(link, download=False)
         title = video_info.get("title", "YouTube video")
-
-    return {'url': f'playlist/{random_text}.mp3', 'title': title}
+        poster = video_info.get("thumbnails")[0].get("url")
+        print(video_info)
+    return {'url': f'playlist/{random_text}.mp3', 'title': title, "poster": poster}

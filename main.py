@@ -1,5 +1,3 @@
-from rich import print
-from rich_for_terminal.beautiful_message import get_beautiful_text
 from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.utils import executor
